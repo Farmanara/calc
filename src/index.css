@@ -10,10 +10,9 @@ body{
 
 .container {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
- 
+    padding-top: 30%;
     border-radius :20px 0 ;
-    padding-top: 2rem;
-    margin: 0 auto;
+    margin: 0  auto;
     background: rgb(0, 0, 0);
     gap: 1rem;
     display: grid;
@@ -21,12 +20,10 @@ body{
     grid-template-rows:  repeat(8,1fr) ;
     justify-content:center ;
     justify-self: center;
-    min-width: 100%;
-    min-height: 480px;
+    min-height: 300px;
     height: 90%;
     width: 90vw;
     touch-action: manipulation;
-      
 }
 button {
     border-radius :20px 0 ;
@@ -40,7 +37,7 @@ button:hover{
 }
 #display{
     border-radius :20px 0 ;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 2rem;
     border: solid 2px black;
     grid-column:1 / span 4;
