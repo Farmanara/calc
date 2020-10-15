@@ -7,9 +7,13 @@ body{
     background:rgb(0, 0, 0);
 
 }
+#heading{
+    text-align: center;
+
+}
 
 .container {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Orbitron , sans-serif;
     padding-top: 30%;
     border-radius :20px 0 ;
     margin: 0  auto;
@@ -26,6 +30,7 @@ body{
     touch-action: manipulation;
 }
 button {
+    font-family: Orbitron , sans-serif;
     border-radius :20px 0 ;
 
     font-size: 2em;
