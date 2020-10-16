@@ -66,6 +66,12 @@ if(e.target.className==="operator"){
     },()=>{})
 
 }
+let lastChar=this.state.Input.charAt(this.state.Input.length-1)
+let secLastChar=this.state.Input.charAt(this.state.Input.length-2)
+if((e.target.className==="operator")&&(lastChar==".")&&(secLastChar=="/"||secLastChar=="*"||secLastChar=="+")){
+return
+}
+
 
 if ((this.state.dotStatus===true)&&(e.target.value===".")){
     return
@@ -145,8 +151,15 @@ if ((lastLetter=="-") && (clickedValue=="-")) {
  //shows the result
 
 equals(){
+    let lastInput=this.state.Input;
+    let lastLetter=lastInput.charAt(lastInput.length-1)
+    if(lastLetter=="/"||lastLetter=="*"||lastLetter=="-"||lastLetter=="+"||lastLetter=="."||lastLetter==""){
+        return
+    }
     let results=this.state.Input
+    
     let stringResult=eval(results).toString();
+
     this.setState({
         display:eval(results),
         Input:stringResult
@@ -179,9 +192,9 @@ equals(){
                 <button className="operator" value="*" id="multiply" onClick={this.onClick}>x</button>
                 <button className="operator" id="divide" value="/" onClick={this.onClick}>/</button>
                 <button className="item decimal " id="decimal" value="." onClick={this.onClick}>.</button>
-                <button className="item clear" id="clear"  value="clear" onClick={this.clear}>C</button>
-                <button className="item equal" id="equals" value="=" onClick={this.equals}>=</button>
-                <button className= "item del"  id="del" onClick={this.handleDelete}>Del</button>
+                <button className="clear" id="clear"  value="clear" onClick={this.clear}>C</button>
+                <button className="equal" id="equals" value="=" onClick={this.equals}>=</button>
+                <button className= "del"  id="del" onClick={this.handleDelete}>Del</button>
             </div>
             // </div>
           

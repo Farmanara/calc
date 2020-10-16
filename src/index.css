@@ -32,13 +32,19 @@ body{
 button {
     font-family: Orbitron , sans-serif;
     border-radius :20px 0 ;
-
+    border: none;
+    color: rgb(255, 255, 255);
     font-size: 2em;
     font-weight: bolder;
+    background-color: #32353a;
 }
 button:hover{
     color: lawngreen;
     background-color: white;
+}
+
+.operator{
+    background-color: #628bc3;
 }
 #display{
     border-radius :20px 0 ;
@@ -111,6 +117,7 @@ grid-row: 5;
 #equals{
     grid-column:4;
     grid-row: 8;
+    color:#628bc3;
 
 }
 #add {
@@ -138,9 +145,12 @@ grid-row: 5;
 #clear {
     grid-column:1 / span 2;
     grid-row: 4;
+    background-color: #ad3537;
+
 } 
 
 #del{
+background-color: #ad3537;
     grid-column:3;
     grid-row:4;
 }
